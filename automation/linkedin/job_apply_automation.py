@@ -19,7 +19,7 @@ def apply_job():
     browser = configure_browser()
 
     try:
-        job_search_url = 'https://www.linkedin.com/jobs/search/?currentJobId=4147957338&distance=25&f_AL=true&f_JT=F&f_SB2=6&f_WT=2&geoId=103644278&keywords=java%20developer&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true&sortBy=DD'
+        job_search_url = 'https://www.linkedin.com/jobs/search/?currentJobId=4181835762&f_AL=true&f_JT=F&f_SB2=7&f_TPR=r604800&f_WT=2&geoId=103644278&keywords=software%20engineer&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true&sortBy=R'
 
         print('\n*** Browsing [{}] ***'.format(job_search_url))
         browser.get(job_search_url)
@@ -41,7 +41,7 @@ def apply_job():
 def configure_browser():
     # Set up Chrome options
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument(r'--user-data-dir=./resources/chromeprofile')
+    chrome_options.add_argument(rf'--user-data-dir={os.path.join(os.getcwd(), "resources", "chromeprofile")}')
     chrome_options.add_argument('--profile-directory=Profile 1')
 
     # Configure browser
