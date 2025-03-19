@@ -13,6 +13,10 @@ def fetch_job_list():
     return job_list
 
 
+def fetch_profile():
+    return open(config.get_profile_file_path(), 'r').read()
+
+
 def fetch_resume_content():
     document = fitz.open(config.get_resume_file_path())
 

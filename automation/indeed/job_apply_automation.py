@@ -10,7 +10,7 @@ from automation.indeed.page import questions_from_employer_page
 from automation.indeed.page import review_application_page
 from config import config
 import os
-
+import chromedriver_binary
 
 
 def apply_job(job_id):
@@ -43,7 +43,7 @@ def apply_job(job_id):
             job_status = handle_error(browser, job_id)
 
     except Exception as e:
-        print("An unexpected error occurred during automation for job id: [{}] \n".format(job_id), e)
+        print("An unexpected error occurred during automation for job id: [{}] \n {}".format(job_id, e))
         job_status = handle_error(browser, job_id)
 
     finally:

@@ -3,6 +3,7 @@ from util import file_util
 from dto.job_status import JobStatus
 from proxy import gemini_proxy
 
+
 def search_job():
     print('Searching indeed for jobs matching the parameters')
     jobs = indeed_proxy.fetch_jobs()

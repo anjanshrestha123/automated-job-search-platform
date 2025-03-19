@@ -45,5 +45,9 @@ def get_resume_file_path():
     return config.get('App', 'resume.file.path')
 
 
+def get_profile_file_path():
+    return config.get('App', 'profile.file.path')
+
+
 def get_job_info(job):
     return config.get('App', 'job.list.file.pattern').format(id=job.id, status=job.status)
